@@ -1,7 +1,12 @@
-import "./App.css";
+import Home from "./pages/Home";
+import Rootpage from "./pages/Rootpage";
 
 function App() {
-  return <div className="App">SetUp</div>;
+  return (
+    <div>
+      <Rootpage />
+    </div>
+  );
 }
 
 export default App;
