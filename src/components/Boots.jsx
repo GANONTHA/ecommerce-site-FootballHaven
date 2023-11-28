@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { BOOTS } from "../Items";
+import Product from "./Products/ProductJersey";
 
 const Boots = () => {
   return (
@@ -12,7 +14,11 @@ const Boots = () => {
         <Link to="/shop/socks">Socks</Link>
         <Link to="/shop/gloves">Gloves</Link>
       </div>
-      <h1>Boots</h1>
+      <div className="list">
+        {BOOTS.map((boot) => (
+          <Product item={boot} key={boot.id} />
+        ))}
+      </div>
     </div>
   );
 };

@@ -174,52 +174,16 @@ export const JERSEYS = [
 
 export const BALLS = [
   {
-    id: 1,
-    name: "ball one",
-    price: 70.99,
-    image: ballOne,
-  },
-  {
-    id: 2,
-    name: "ball Nike",
-    price: 80.99,
-    image: ballTwo,
-  },
-  {
     id: 3,
     name: "ball Premier League",
     price: 70.99,
     image: ballThree,
   },
   {
-    id: 4,
-    name: "ball FIFA Qatar WC",
-    price: 80.99,
-    image: ballFour,
-  },
-  {
-    id: 5,
-    name: "ball Qataer WC",
-    price: 70.99,
-    image: ballFive,
-  },
-  {
-    id: 6,
-    name: "ball WC 2014",
-    price: 90.99,
-    image: ballSix,
-  },
-  {
     id: 7,
     name: "ball Laliga 2023",
     price: 70.99,
     image: ballSeven,
-  },
-  {
-    id: 8,
-    name: "ball Laliga 2021",
-    price: 70.99,
-    image: ballEight,
   },
   {
     id: 9,
@@ -229,10 +193,50 @@ export const BALLS = [
     image: ballNine,
   },
   {
+    id: 1,
+    name: "ball one",
+    price: 70.99,
+    image: ballOne,
+  },
+  {
+    id: 6,
+    name: "ball WC 2014",
+    price: 90.99,
+    image: ballSix,
+  },
+
+  {
+    id: 4,
+    name: "ball FIFA Qatar WC",
+    price: 80.99,
+    image: ballFour,
+  },
+  {
     id: 10,
     name: "ball UEFA Champions League 20",
     price: 70.99,
     image: ballTen,
+  },
+
+  {
+    id: 2,
+    name: "ball Nike",
+    price: 80.99,
+    image: ballTwo,
+  },
+
+  {
+    id: 8,
+    name: "ball Laliga 2021",
+    price: 70.99,
+    image: ballEight,
+  },
+
+  {
+    id: 5,
+    name: "ball Qatar WC",
+    price: 70.99,
+    image: ballFive,
   },
 ];
 //BOOTS

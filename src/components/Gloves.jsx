@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { GLOVES } from "../Items";
+import Product from "../components/Products/ProductJersey";
 
 const Gloves = () => {
   return (
@@ -12,7 +14,11 @@ const Gloves = () => {
         <Link to="/shop/socks">Socks</Link>
         <Link to="/shop/gloves">Gloves</Link>
       </div>
-      <h1>Gloves</h1>
+      <div className="list">
+        {GLOVES.map((glove) => (
+          <Product item={glove} key={glove.id} />
+        ))}
+      </div>
     </div>
   );
 };

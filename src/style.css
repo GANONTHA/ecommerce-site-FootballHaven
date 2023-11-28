@@ -189,3 +189,116 @@
 h1 {
   text-align: center;
 }
+.list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.item {
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  margin: 2rem auto;
+  align-items: center;
+  border: 1px solid #04f769;
+  padding: 10px 0px;
+  border-radius: 14px;
+}
+.ball {
+  width: 25%;
+  margin: 2rem 3rem;
+}
+
+.name-price {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 90%;
+}
+.CTA button {
+  border: 0;
+  height: 30px;
+  padding: 10px;
+  text-align: center;
+  color: #fff;
+  font-weight: 700;
+  background: #04f769;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+.description {
+  text-align: left;
+}
+.sub-title-about {
+  margin: 2rem 0;
+}
+.about {
+  height: calc(80vh + 13px);
+  padding: 0 10px;
+}
+.contacts {
+  padding: 0 10px;
+  height: 80vh;
+  width: 100vw;
+}
+.contact-us {
+  height: 90%;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.social,
+.send-a-request {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background: #e3ebe6;
+  width: 50%;
+  height: 100%;
+  margin: 2px;
+  border-radius: 5px;
+}
+.phone-numbers,
+.social-media {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  cursor: pointer;
+}
+.send-a-request input,
+textarea {
+  border: 0;
+  margin: 10px;
+  width: 70%;
+  height: 100px;
+  border-radius: 7px;
+}
+.send-a-request input {
+  width: 50%;
+  height: 23px;
+}
+.send-a-request form {
+  height: 100%;
+  width: 70%;
+  margin: 2rem auto;
+}
+.send-a-request label {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 100;
+  text-align: justify;
+}
+.send-a-request form button {
+  border: 0;
+  width: 100px;
+  height: 20px;
+  padding: 3px;
+  color: #fff;
+  background: #04f769;
+  border-radius: 5px;
+  margin-top: 20px;
+}
