@@ -1,11 +1,12 @@
 import React from "react";
 import aboutPhoto from "../assets/images/stadium.jpg";
+import Footer from "../components/Footer";
 
 const About = () => {
   return (
     <div className="about">
       <div className="about-image">
-        <img src={aboutPhoto} alt="about-image" width="100%" height="200px" />
+        <img src={aboutPhoto} alt="about-image" width="100%" height="400px" />
       </div>
       <div className="title">
         <h1 className="itle-about">ABOUT US:</h1>
@@ -22,6 +23,7 @@ const About = () => {
           We will give everyone a chance to get his disired football equipment
         </p>
       </div>
+      <Footer />
     </div>
   );
 };

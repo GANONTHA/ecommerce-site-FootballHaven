@@ -6,7 +6,7 @@ import Cart from "./Cart";
 import Home from "./Home";
 import { Routes, Route, Link, useNavigate } from "react-router-dom";
 import "../style.css";
-import cart from "../assets/icons/shopping-cart.png";
+import shoppingCart from "../assets/icons/shopping-cart.png";
 import logo from "../assets/logo/footballhaven-logo.png";
 
 import Balls from "../components/Balls";
@@ -16,8 +16,10 @@ import Gloves from "../components/Gloves";
 import Socks from "../components/Socks";
 import All from "../components/AllItems";
 import AllItems from "../components/AllItems";
+import { useProductProvider } from "../Provider/ProductProvider";
 
 const Rootpage = () => {
+  const { cart } = useProductProvider();
   const navigate = useNavigate();
   function navigateHome() {
     navigate("/");
@@ -41,7 +43,13 @@ const Rootpage = () => {
           <Link to="/contacts">Contacts</Link>
           <Link to="/cart">
             <div className="cart">
-              <img src={cart} alt="cart" height="30px" width="30px" />
+              {cart.length > 0 && <h6> {cart.length}</h6>}
+              <img
+                src={shoppingCart}
+                alt="shoppingCart"
+                height="30px"
+                width="30px"
+              />
               <p>Cart</p>
             </div>
           </Link>

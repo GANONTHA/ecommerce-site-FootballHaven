@@ -2,6 +2,7 @@ import React from "react";
 import facebook from "../assets/images/socials/facebook.png";
 import linkedIn from "../assets/images/socials/linkedin.png";
 import email from "../assets/images/socials/email.png";
+import { FacebookLogo, LinkedinLogo, InstagramLogo } from "phosphor-react";
 
 const Contacts = () => {
   return (
@@ -21,15 +22,9 @@ const Contacts = () => {
           <p className="social-media">
             Follow us on social media
             <span>
-              {" "}
-              <img
-                src={facebook}
-                alt="facebook"
-                height="45px"
-                width="45px"
-              />{" "}
-              <img src={linkedIn} alt="linkedIn" height="45px" width="45px" />{" "}
-              <img src={email} alt="email" height="45px" width="45px" />{" "}
+              <FacebookLogo size={40} color="#605959" />
+              <LinkedinLogo size={40} color="#605959" />
+              <InstagramLogo size={40} color="#605959" />
             </span>
           </p>
         </div>
@@ -39,23 +34,31 @@ const Contacts = () => {
           <form>
             <div className="first-name">
               <label htmlFor="first-name">First Name:</label>
-              <input type="text" id="first-name" />
+              <input type="text" id="first-name" placeholder="e.g:Delta" />
             </div>
             <div className="last-name">
               <label htmlFor="last-name">Last Name:</label>
-              <input type="text" id="last-name" />
+              <input type="text" id="last-name" placeholder="Harris" />
             </div>
             <div className="phone">
               <label htmlFor="phone">Phone number:</label>
-              <input type="text" id="phone" />
+              <input type="text" id="phone" placeholder="+1 222 333 444" />
             </div>
             <div className="email-address">
               <label htmlFor="email-address">Email:</label>
-              <input type="text" id="email-address" />
+              <input
+                type="text"
+                id="email-address"
+                placeholder="example@gmail.com"
+              />
             </div>
             <div className="message-content">
               <label htmlFor="-content">Message:</label>
-              <textarea type="text" id="message-content" />
+              <textarea
+                type="text"
+                placeholder="Enter your message here..."
+                id="message-content"
+              />
             </div>
             <button>Submit</button>
           </form>

@@ -1,11 +1,11 @@
-import Home from "./pages/Home";
 import Rootpage from "./pages/Rootpage";
+import ProductProvider from "./Provider/ProductProvider";
 
 function App() {
   return (
-    <div>
+    <ProductProvider>
       <Rootpage />
-    </div>
+    </ProductProvider>
   );
 }
 
