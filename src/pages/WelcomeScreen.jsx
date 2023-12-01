@@ -2,12 +2,7 @@ import React from "react";
 import "../style.css";
 import banner from "../assets/images/banner-image.png";
 import ball from "../assets/images/balls/ball1.png";
-import { useNavigate, Routes, Route } from "react-router-dom";
-import Home from "./Home";
-import SHOP from "./SHOP";
-import Cart from "./Cart";
-import About from "./About";
-import Contacts from "./Contacts";
+import { useNavigate } from "react-router-dom";
 
 const WelcomeScreen = () => {
   const navigate = useNavigate();
@@ -21,7 +16,7 @@ const WelcomeScreen = () => {
           <div className="heading-text-1">
             <h1>Shopping Makes Really Easy!</h1>{" "}
             <p>
-              FootbBall Haven makes shopping easy for you. You are only a few
+              FootBall Haven makes shopping easy for you. You are only a few
               clicks away from getting your dream football equipment
             </p>
             <button onClick={() => navigateHome()}>Shop Now!</button>

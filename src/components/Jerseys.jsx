@@ -7,7 +7,7 @@ import Footer from "../components/Footer";
 
 const Jerseys = () => {
   return (
-    <div>
+    <>
       <div className="items-menu">
         <Link to="/shop">All</Link>
         <Link to="/shop/boots">Boots</Link>
@@ -22,7 +22,7 @@ const Jerseys = () => {
         ))}
       </div>
       <Footer />
-    </div>
+    </>
   );
 };
 

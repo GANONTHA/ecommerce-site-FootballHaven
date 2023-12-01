@@ -8,7 +8,6 @@ import { Routes, Route, Link, useNavigate } from "react-router-dom";
 import "../style.css";
 import shoppingCart from "../assets/icons/shopping-cart.png";
 import logo from "../assets/logo/footballhaven-logo.png";
-
 import Balls from "../components/Balls";
 import Jerseys from "../components/Jerseys";
 import Boots from "../components/Boots";
@@ -17,7 +16,7 @@ import Socks from "../components/Socks";
 import All from "../components/AllItems";
 import AllItems from "../components/AllItems";
 import { useProductProvider } from "../Provider/ProductProvider";
-
+import burgerIcon from "../assets/icons/burger-menu.png";
 const Rootpage = () => {
   const { cart } = useProductProvider();
   const navigate = useNavigate();
@@ -37,22 +36,38 @@ const Rootpage = () => {
           />
         </div>
         <div className="nav-links">
-          <Link to="/">Home</Link>
-          <Link to="/shop">Shop</Link>
-          <Link to="/about">About</Link>
-          <Link to="/contacts">Contacts</Link>
+          <Link to="/" className="desktop-link">
+            Home
+          </Link>
+          <Link to="/shop" className="desktop-link">
+            Shop
+          </Link>
+          <Link to="/about" className="desktop-link">
+            About
+          </Link>
+          <Link to="/contacts" className="desktop-link">
+            Contacts
+          </Link>
           <Link to="/cart">
             <div className="cart">
-              {cart.length > 0 && <h6> {cart.length}</h6>}
+              <div className="desktop-mode">
+                {cart.length > 0 && <h6> {cart.length}</h6>}
+              </div>
+              <div className="mobile-mode">
+                {cart.length > 0 && <h6> .</h6>}
+              </div>
               <img
                 src={shoppingCart}
                 alt="shoppingCart"
                 height="30px"
                 width="30px"
               />
-              <p>Cart</p>
+              <p className="desktop-link">Cart</p>
             </div>
           </Link>
+        </div>
+        <div className="burger-icon">
+          <img src={burgerIcon} alt="burger-icon" height="45px" width="40px" />
         </div>
       </nav>
       <Routes>

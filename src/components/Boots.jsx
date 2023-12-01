@@ -6,7 +6,7 @@ import Footer from "../components/Footer";
 
 const Boots = () => {
   return (
-    <div>
+    <div className="">
       <div className="items-menu">
         <Link to="/shop">All</Link>
         <Link to="/shop/boots">Boots</Link>

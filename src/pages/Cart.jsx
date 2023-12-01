@@ -16,18 +16,9 @@ const Cart = () => {
     navigation("/shop");
   }
   return (
-    <div className="cart">
+    <div className="cart-of-items">
       <h2>SHOPPING CART</h2>
       <div className="shopping-cart">
-        <div className="items-in-cart">
-          {cart.length > 0 ? (
-            cart.map((product) => (
-              <CartItem product={product} key={product.id} />
-            ))
-          ) : (
-            <div className="cart-empty">Your Cart is Empty</div>
-          )}
-        </div>
         <div className="item-cost">
           <h4 className="total-title">Total Amount</h4>
           <h5>
@@ -50,6 +41,15 @@ const Cart = () => {
               {cart.length === 0 ? "Go to shop" : "Continue Shopping!"}
             </button>
           </div>
+        </div>
+        <div className="items-in-cart">
+          {cart.length > 0 ? (
+            cart.map((product) => (
+              <CartItem product={product} key={product.id} />
+            ))
+          ) : (
+            <div className="cart-empty">Your Cart is Empty</div>
+          )}
         </div>
       </div>
     </div>
