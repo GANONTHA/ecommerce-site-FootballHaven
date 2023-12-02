@@ -50,7 +50,7 @@ const Footer = () => {
             <li>Terms & conditions</li>
             <li>Privacy & Policies</li>
             <li>Education purpose</li>
-            <li>No for Marketing or Sell</li>
+            <li>No for Marketing</li>
           </ul>
         </div>
         <div className="second-row-row-two">
