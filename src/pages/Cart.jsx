@@ -33,7 +33,11 @@ const Cart = () => {
               {(totalprice + shippingprice).toFixed(2)}
             </span>
           </h4>
-          <button disabled={cart.length === 0} onClick={() => checkout()}>
+          <button
+            className="checkout"
+            disabled={cart.length === 0}
+            onClick={() => checkout()}
+          >
             Checkout
           </button>
           <div className="continue-shopping">
