@@ -6,8 +6,8 @@ import { BALLS } from "../data/Items";
 import { SOCKS } from "../data/Items";
 import { GLOVES } from "../data/Items";
 import { BOOTS } from "../data/Items";
-const ProductContext = createContext(undefined);
 
+const ProductContext = createContext(undefined);
 const ProductProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
   const [allProducts, setAll] = useState(ITEMS);

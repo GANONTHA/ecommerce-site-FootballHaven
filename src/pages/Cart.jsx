@@ -25,7 +25,8 @@ const Cart = () => {
             Product price: <span>${totalprice.toFixed(2)}</span>
           </h5>
           <h5>
-            Shipping cost: <span>$ {shippingprice.toFixed(2)}</span>
+            Shipping cost:{" "}
+            <span data-testid="shipping">$ {shippingprice.toFixed(2)}</span>
           </h5>
           <h4>
             Total to Pay{" "}

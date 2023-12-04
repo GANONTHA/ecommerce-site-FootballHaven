@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import searchIcon from "../assets/icons/search-icon.png";
 import AllItems from "../components/AllItems";
 import useScrollDirection from "../components/useScrollHook";
@@ -33,12 +33,12 @@ const SHOP = () => {
       <div
         className={`items-menu ${scrollDirection === "down" ? "hide" : "show"}`}
       >
-        <Link to="/shop">All</Link>
-        <Link to="/shop/boots">Boots</Link>
-        <Link to="/shop/jerseys">Jerseys</Link>
-        <Link to="/shop/balls">Balls</Link>
-        <Link to="/shop/socks">Socks</Link>
-        <Link to="/shop/gloves">Gloves</Link>
+        <NavLink to="/shop">All</NavLink>
+        <NavLink to="/boots">Boots</NavLink>
+        <NavLink to="/jerseys">Jerseys</NavLink>
+        <NavLink to="/balls">Balls</NavLink>
+        <NavLink to="/socks">Socks</NavLink>
+        <NavLink to="/gloves">Gloves</NavLink>
         <div className="search-bar">
           <div onClick={handleClick} className="search-icon">
             <img
