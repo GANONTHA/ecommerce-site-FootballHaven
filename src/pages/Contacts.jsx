@@ -1,9 +1,9 @@
 import React from "react";
-import facebook from "../assets/images/socials/facebook.png";
-import linkedIn from "../assets/images/socials/linkedin.png";
-import email from "../assets/images/socials/email.png";
 import { FacebookLogo, LinkedinLogo, InstagramLogo } from "phosphor-react";
 
+function handleSubmit(e) {
+  e.preventDefault();
+}
 const Contacts = () => {
   return (
     <div className="contacts">
@@ -14,7 +14,7 @@ const Contacts = () => {
         <div className="send-a-request">
           <h3>Send a Request</h3>
 
-          <form>
+          <form onSubmit={handleSubmit}>
             <div className="first-name">
               <label htmlFor="first-name">First Name:</label>
               <input type="text" id="first-name" placeholder="e.g:Delta" />
