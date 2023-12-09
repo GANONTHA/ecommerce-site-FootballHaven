@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import SHOP from "./SHOP";
 import Contacts from "./Contacts";
 import About from "./About";
@@ -17,10 +17,20 @@ import Socks from "../components/Socks";
 import AllItems from "../components/AllItems";
 import { useProductProvider } from "../Provider/ProductProvider";
 import burgerIcon from "../assets/icons/burger-menu.png";
+
 const Rootpage = () => {
   const [open, setOpen] = useState(false);
+  const menuRef = useRef();
   const { cart } = useProductProvider();
 
+  useEffect(() => {
+    let handler = (e) => {
+      if (!menuRef.current.contains(e.target)) {
+        setOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handler);
+  });
   //navigate home
   const navigate = useNavigate();
   function navigateHome() {
@@ -28,7 +38,7 @@ const Rootpage = () => {
   }
   return (
     <div>
-      <nav className="nav-bar">
+      <nav className="nav-bar" ref={menuRef}>
         <div className="logo">
           <img
             src={logo}
@@ -45,6 +55,7 @@ const Rootpage = () => {
             onClick={() => {
               setOpen(!open);
             }}
+            data-testid="home"
           >
             Home
           </NavLink>
