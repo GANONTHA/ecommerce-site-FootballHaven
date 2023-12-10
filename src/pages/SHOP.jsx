@@ -52,7 +52,7 @@ const SHOP = () => {
           <input
             value={text}
             type="search"
-            placeholder="search by name, color, price"
+            placeholder="search by name or price"
             id="search"
             ref={inputRef}
             onChange={(e) => setText(e.target.value)}

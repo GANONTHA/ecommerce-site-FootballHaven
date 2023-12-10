@@ -30,6 +30,9 @@ const Rootpage = () => {
       }
     };
     document.addEventListener("mousedown", handler);
+    return () => {
+      document.removeEventListener("mousedown", handler);
+    };
   });
   //navigate home
   const navigate = useNavigate();

@@ -65,7 +65,11 @@ const ProductProvider = ({ children }) => {
   }
   //search an item with NAME, PRICE, COLOR
   function search(text) {
-    if (text.toLowerCase() === "jersey" || text.toLowerCase() === "jerseys") {
+    if (
+      text.toLowerCase() === "jersey" ||
+      text.toLowerCase() === "jerseys" ||
+      text.toLowerCase() === "shirt"
+    ) {
       setAll(JERSEYS);
     } else if (
       text.toLowerCase() === "ball" ||
@@ -79,7 +83,9 @@ const ProductProvider = ({ children }) => {
       setAll(SOCKS);
     } else if (
       text.toLowerCase() === "boot" ||
-      text.toLowerCase() === "boots"
+      text.toLowerCase() === "boots" ||
+      text.toLowerCase() === "shoe" ||
+      text.toLowerCase() === "shoes"
     ) {
       setAll(BOOTS);
     } else if (
@@ -92,7 +98,8 @@ const ProductProvider = ({ children }) => {
         ITEMS.filter(
           (item) =>
             item.name.toLowerCase().includes(text.toLowerCase()) ||
-            item.price <= text
+            item.price <= text ||
+            item.color.toLowerCase().includes(text.toLowerCase())
         )
       );
     }
