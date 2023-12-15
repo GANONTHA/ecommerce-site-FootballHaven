@@ -1,6 +1,6 @@
 import React from "react";
 import "../style.css";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { JERSEYS } from "../data/Items";
 import Product from "./Products/ProductJersey";
 import Footer from "../components/Footer";
@@ -9,12 +9,12 @@ const Jerseys = () => {
   return (
     <>
       <div className="items-menu">
-        <Link to="/shop">All</Link>
-        <Link to="/shop/boots">Boots</Link>
-        <Link to="/shop/jerseys">Jerseys</Link>
-        <Link to="/shop/balls">Balls</Link>
-        <Link to="/shop/socks">Socks</Link>
-        <Link to="/shop/gloves">Gloves</Link>
+        <NavLink to="/shop">All</NavLink>
+        <NavLink to="/boots">Boots</NavLink>
+        <NavLink to="/jerseys">Jerseys</NavLink>
+        <NavLink to="/balls">Balls</NavLink>
+        <NavLink to="/socks">Socks</NavLink>
+        <NavLink to="/gloves">Gloves</NavLink>
       </div>
       <div className="list">
         {JERSEYS.map((jersey) => (
