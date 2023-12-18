@@ -33,7 +33,6 @@ const CartItem = (props) => {
     <div className="item-in-cart-description">
       <div className="descriptions-image">
         <div className="item-image">
-          {/* <img src={image} alt="item in cart" height="100px" width="100px" /> */}
           <ReactImageMagnify {...imageProps} />
         </div>
         <div className="details">

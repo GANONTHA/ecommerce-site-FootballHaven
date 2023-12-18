@@ -10,7 +10,7 @@ import { BOOTS } from "../data/Items";
 const ProductContext = createContext(undefined);
 const ProductProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
-  const [allProducts, setAll] = useState(ITEMS);
+  const [allProducts, setAllProducts] = useState(ITEMS);
   const [favorite, setFavorite] = useState([]);
   //function to add items to the cart
   function addItem(id) {
@@ -90,31 +90,31 @@ const ProductProvider = ({ children }) => {
       text.toLowerCase() === "jerseys" ||
       text.toLowerCase() === "shirt"
     ) {
-      setAll(JERSEYS);
+      setAllProducts(JERSEYS);
     } else if (
       text.toLowerCase() === "ball" ||
       text.toLowerCase() === "balls"
     ) {
-      setAll(BALLS);
+      setAllProducts(BALLS);
     } else if (
       text.toLowerCase() === "sock" ||
       text.toLowerCase() === "socks"
     ) {
-      setAll(SOCKS);
+      setAllProducts(SOCKS);
     } else if (
       text.toLowerCase() === "boot" ||
       text.toLowerCase() === "boots" ||
       text.toLowerCase() === "shoe" ||
       text.toLowerCase() === "shoes"
     ) {
-      setAll(BOOTS);
+      setAllProducts(BOOTS);
     } else if (
       text.toLowerCase() === "glove" ||
       text.toLowerCase() === "gloves"
     ) {
-      setAll(GLOVES);
+      setAllProducts(GLOVES);
     } else {
-      setAll(
+      setAllProducts(
         ITEMS.filter(
           (item) =>
             item.name.toLowerCase().includes(text.toLowerCase()) ||
