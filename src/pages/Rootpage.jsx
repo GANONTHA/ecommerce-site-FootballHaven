@@ -8,6 +8,7 @@ import Home from "./Home";
 import { Routes, Route, useNavigate, NavLink } from "react-router-dom";
 import "../style.css";
 import shoppingCart from "../assets/icons/shopping-cart.png";
+import favoriteIcon from "../assets/icons/favorite-icon.png";
 import logo from "../assets/logo/footballhaven-logo.png";
 import Balls from "../components/Balls";
 import Jerseys from "../components/Jerseys";
@@ -21,7 +22,7 @@ import burgerIcon from "../assets/icons/burger-menu.png";
 const Rootpage = () => {
   const [open, setOpen] = useState(false);
   const menuRef = useRef();
-  const { cart } = useProductProvider();
+  const { cart, favorite } = useProductProvider();
 
   useEffect(() => {
     let handler = (e) => {
@@ -104,13 +105,24 @@ const Rootpage = () => {
           <div className="mobile-mode">{cart.length > 0 && <h6> .</h6>}</div>
           <div className="desktop-mode">
             {cart.length > 0 && <h6> {cart.length}</h6>}
+            {favorite.length > 0 && <h5> {favorite.length}</h5>}
           </div>
-          <img
-            src={shoppingCart}
-            alt="shoppingCart"
-            height="30px"
-            width="30px"
-          />
+          <div className="icons">
+            <img
+              src={favoriteIcon}
+              alt="wish list icon"
+              height="30px"
+              width="30px"
+              className="favorite-list-icon"
+            />
+            <img
+              src={shoppingCart}
+              alt="shoppingCart"
+              height="30px"
+              width="30px"
+              className="shopping-cart-icon"
+            />
+          </div>
         </div>
         <div
           className="burger-icon"

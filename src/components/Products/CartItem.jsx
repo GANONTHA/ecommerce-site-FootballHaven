@@ -4,7 +4,7 @@ import ReactImageMagnify from "react-image-magnify";
 import { Trash, Heart } from "phosphor-react";
 
 const CartItem = (props) => {
-  const { increaseQuantity, decreaseQuantity, removeFromCart } =
+  const { increaseQuantity, decreaseQuantity, removeFromCart, addFavorite } =
     useProductProvider();
   const { id, name, image, price, quantity } = props.product;
 
@@ -39,7 +39,7 @@ const CartItem = (props) => {
               <Trash size={20} />
               remove
             </p>
-            <p className="favorite">
+            <p className="favorite" onClick={() => addFavorite(id)}>
               <Heart size={20} />
               move to wish list
             </p>

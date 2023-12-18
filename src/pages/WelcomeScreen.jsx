@@ -17,7 +17,7 @@ const WelcomeScreen = () => {
             <h1>Shopping Makes Really Easy!</h1>{" "}
             <p>
               FootBall Haven makes shopping easy for you. You are only a few
-              clicks away from getting your dream football equipment
+              clicks away from getting your dream football kits
             </p>
             <button onClick={() => navigateHome()}>Shop Now!</button>
           </div>
