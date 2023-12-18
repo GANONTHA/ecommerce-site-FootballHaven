@@ -24,6 +24,11 @@ const CartItem = (props) => {
       zindex: 9,
     },
   };
+  //function to hancle click on move to wish list
+  function handleMoveWishList(id) {
+    addFavorite(id);
+    removeFromCart(id);
+  }
   return (
     <div className="item-in-cart-description">
       <div className="descriptions-image">
@@ -39,7 +44,7 @@ const CartItem = (props) => {
               <Trash size={20} />
               remove
             </p>
-            <p className="favorite" onClick={() => addFavorite(id)}>
+            <p className="favorite" onClick={() => handleMoveWishList(id)}>
               <Heart size={20} />
               move to wish list
             </p>

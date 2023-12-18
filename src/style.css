@@ -202,7 +202,28 @@
 .mobile-mode {
   display: none;
 }
-
+.icons {
+  cursor: pointer;
+}
+.favorite-class {
+  margin: 2rem 7rem;
+}
+.favorite-items {
+  display: flex;
+  flex-direction: row;
+  margin: 3rem 4rem;
+  border-bottom: 1px solid #04f769;
+  width: 100%;
+  padding-bottom: 1rem;
+}
+.fav-name-price {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.fav-name-price .remove {
+  border: 0;
+}
 /* SHOP*/
 /* search bar */
 
@@ -549,11 +570,11 @@ h5 {
   padding: 2px;
   border-radius: 5px;
 }
-.item-in-cart-description .descriptions-image .actions .remove,
+.remove,
 .favorite {
   cursor: pointer;
 }
-.item-in-cart-description .descriptions-image .actions .remove {
+.remove {
   color: red;
   align-items: center;
   display: flex;

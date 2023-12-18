@@ -18,11 +18,13 @@ import Socks from "../components/Socks";
 import AllItems from "../components/AllItems";
 import { useProductProvider } from "../Provider/ProductProvider";
 import burgerIcon from "../assets/icons/burger-menu.png";
+import Favorite from "./Favorite";
 
 const Rootpage = () => {
   const [open, setOpen] = useState(false);
   const menuRef = useRef();
   const { cart, favorite } = useProductProvider();
+  const navigate = useNavigate();
 
   useEffect(() => {
     let handler = (e) => {
@@ -36,9 +38,17 @@ const Rootpage = () => {
     };
   });
   //navigate home
-  const navigate = useNavigate();
+
   function navigateHome() {
     navigate("/");
+  }
+  //navigate to favorite page
+  function navigateFavorite() {
+    navigate("/favorite");
+  }
+  //navigate to Cart
+  function navigateCart() {
+    navigate("/cart");
   }
   return (
     <div>
@@ -114,6 +124,7 @@ const Rootpage = () => {
               height="30px"
               width="30px"
               className="favorite-list-icon"
+              onClick={() => navigateFavorite()}
             />
             <img
               src={shoppingCart}
@@ -121,6 +132,7 @@ const Rootpage = () => {
               height="30px"
               width="30px"
               className="shopping-cart-icon"
+              onClick={() => navigateCart()}
             />
           </div>
         </div>
@@ -157,6 +169,7 @@ const Rootpage = () => {
         <Route path="/socks" element={<Socks />}></Route>
         <Route path="/gloves" element={<Gloves />}></Route>
         <Route path="/shop" element={<AllItems />}></Route>
+        <Route path="/favorite" element={<Favorite />}></Route>
       </Routes>
     </div>
   );

@@ -72,11 +72,10 @@ const ProductProvider = ({ children }) => {
 
       setFavorite([...favorite, { ...newItem, quantity: 1 }]);
     }
-    removeFromCart(id);
   }
   //remove from favorite
   function removeFromFavorite(id) {
-    const exist = cart.find((item) => item.id === id);
+    const exist = favorite.find((item) => item.id === id);
     setFavorite(favorite.filter((item) => item.id !== exist.id));
   }
   //checkout
