@@ -6,7 +6,7 @@ const ProductBall = (props) => {
   const { id, name, image, price } = props.item;
   return (
     <div className="item ball">
-      <img src={image} alt="ball" height="200px" width="200px" />
+      <img src={image} alt={id} height="200px" width="200px" />
       <div className="name-price">
         <h4>{name}</h4>
         <h5>${price}</h5>
