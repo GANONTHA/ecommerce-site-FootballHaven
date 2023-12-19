@@ -10,7 +10,8 @@ import { BOOTS } from "../data/Items";
 const ProductContext = createContext(undefined);
 const ProductProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
-  const [allProducts, setAll] = useState(ITEMS);
+  const [allProducts, setAllProducts] = useState(ITEMS);
+  const [favorite, setFavorite] = useState([]);
   //function to add items to the cart
   function addItem(id) {
     const exist = cart.find((item) => item.id === id);
@@ -57,7 +58,26 @@ const ProductProvider = ({ children }) => {
     const exist = cart.find((item) => item.id === id);
     setCart(cart.filter((item) => item.id !== exist.id));
   }
+  //add to favorite
+  function addFavorite(id) {
+    const exist = favorite.find((item) => item.id === id);
+    if (exist) {
+      setFavorite(
+        favorite.map((fav) =>
+          fav.id === exist.id ? { ...fav, quantity: fav.favorite + 1 } : fav
+        )
+      );
+    } else {
+      const newItem = cart.find((item) => item.id === id);
 
+      setFavorite([...favorite, { ...newItem, quantity: 1 }]);
+    }
+  }
+  //remove from favorite
+  function removeFromFavorite(id) {
+    const exist = favorite.find((item) => item.id === id);
+    setFavorite(favorite.filter((item) => item.id !== exist.id));
+  }
   //checkout
   function checkout() {
     alert("THANK YOU FOR YOUR PURCHASE!");
@@ -70,31 +90,31 @@ const ProductProvider = ({ children }) => {
       text.toLowerCase() === "jerseys" ||
       text.toLowerCase() === "shirt"
     ) {
-      setAll(JERSEYS);
+      setAllProducts(JERSEYS);
     } else if (
       text.toLowerCase() === "ball" ||
       text.toLowerCase() === "balls"
     ) {
-      setAll(BALLS);
+      setAllProducts(BALLS);
     } else if (
       text.toLowerCase() === "sock" ||
       text.toLowerCase() === "socks"
     ) {
-      setAll(SOCKS);
+      setAllProducts(SOCKS);
     } else if (
       text.toLowerCase() === "boot" ||
       text.toLowerCase() === "boots" ||
       text.toLowerCase() === "shoe" ||
       text.toLowerCase() === "shoes"
     ) {
-      setAll(BOOTS);
+      setAllProducts(BOOTS);
     } else if (
       text.toLowerCase() === "glove" ||
       text.toLowerCase() === "gloves"
     ) {
-      setAll(GLOVES);
+      setAllProducts(GLOVES);
     } else {
-      setAll(
+      setAllProducts(
         ITEMS.filter(
           (item) =>
             item.name.toLowerCase().includes(text.toLowerCase()) ||
@@ -115,6 +135,9 @@ const ProductProvider = ({ children }) => {
         checkout,
         search,
         allProducts,
+        addFavorite,
+        removeFromFavorite,
+        favorite,
       }}
     >
       {children}

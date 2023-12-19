@@ -14,14 +14,12 @@ const About = () => {
       <div className="description">
         <h2 className="sub-title-about">Our Purpose</h2>
         <p>
-          We believe that any football fan deserves perfect football equipments
-          to make his fan experience perfect. Each fan should have his disired
+          We believe that any football fan deserves perfect football kits to
+          make his fan experience perfect. Each fan should have his disired
           club's kit
         </p>
         <h2 className="sub-title-about">OUR VISION:</h2>
-        <p>
-          We will give everyone a chance to get his disired football equipment
-        </p>
+        <p>We will give everyone a chance to get his disired football kit</p>
       </div>
       <Footer />
     </div>
