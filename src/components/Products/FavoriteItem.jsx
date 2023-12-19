@@ -8,7 +8,7 @@ const FavoriteItem = (props) => {
 
   return (
     <div className="favorite-items">
-      <img src={image} alt="favorite item image" height="200px" width="200px" />
+      <img src={image} alt="favorite item" height="200px" width="200px" />
       <div className="fav-name-price">
         <div className="fav-name">
           {" "}
