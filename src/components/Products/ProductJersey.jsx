@@ -10,7 +10,7 @@ const Product = (props) => {
   }
   return (
     <div className="item">
-      <img src={image} alt="jersey" height="210px" width="300px" />
+      <img src={image} alt={id} height="210px" width="300px" />
       <div className="name-price">
         <h4>{name}</h4>
         <h5>${price}</h5>

@@ -7,8 +7,8 @@ import { SOCKS } from "../data/Items";
 import { GLOVES } from "../data/Items";
 import { BOOTS } from "../data/Items";
 
-const ProductContext = createContext(undefined);
-const ProductProvider = ({ children }) => {
+export const ProductContext = createContext(undefined);
+export const ProductProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
   const [allProducts, setAllProducts] = useState(ITEMS);
   const [favorite, setFavorite] = useState([]);
@@ -146,4 +146,3 @@ const ProductProvider = ({ children }) => {
 };
 
 export const useProductProvider = () => useContext(ProductContext);
-export default ProductProvider;
